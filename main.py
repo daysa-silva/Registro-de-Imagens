@@ -1,29 +1,30 @@
 import argparse
 import logging
+import os
 import cv2
 import numpy as np
 from funcoes import detectAndDescribe, matchKeyPoints
 
 def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
-    logging.info('Baixando imagem original...')
+    logging.debug('Baixando imagem original...')
     logging.debug(f'Caminho: {queryImg_path}')
     queryImg = cv2.imread(queryImg_path, 1)
     queryImg_gray = cv2.cvtColor(queryImg, cv2.COLOR_BGR2GRAY)
 
-    logging.info('Baixando imagem a ser costurada...')
+    logging.debug('Baixando imagem a ser costurada...')
     logging.debug(f'Caminho: {trainImg_path}')
     trainImg = cv2.imread(trainImg_path, 1)
     trainImg_gray = cv2.cvtColor(cv2.imread(trainImg_path, 1), cv2.COLOR_BGR2GRAY)
     
     # Busca os pontos-chave e recursos correspondentes às imagens
     logging.info('Encontrando os pontos-chaves...')
-    logging.debug(f'feature_extractor: {feature_extractor}')
+    logging.info(f'feature_extractor: {feature_extractor}')
     kpsA, featuresA = detectAndDescribe(trainImg_gray, feature_extractor)
     kpsB, featuresB = detectAndDescribe(queryImg_gray, feature_extractor)
 
     # Vamos encontrar os ponto chaves correspondentes nessas duas imagens
     logging.info('Encontrando os pares de pontos-chaves correspondentes...')
-    logging.debug(f'feature_matching: {feature_matching}')
+    logging.info(f'feature_matching: {feature_matching}')
     matches = matchKeyPoints(featuresA, featuresB, feature_matching, feature_extractor)
 
 
@@ -74,4 +75,9 @@ if __name__ == '__main__':
 
     nova_imagem = stich(args.queryImg, args.trainImg, args.extractor, args.matching)
 
-    cv2.imwrite(f'{args.output}/{args.extractor}_{args.matching}.png', nova_imagem)
+    logging.info(f'Imagens costuradas. Nova imagem de dimensões {nova_imagem.shape}')
+    if not os.path.isdir(args.output):
+        logging.warning('Diretório %s não existe. Nova magem não será salva', args.output)
+    else:
+        logging.info(f'Salvando imagem em {args.output}/{args.extractor}_{args.matching}.png')
+        cv2.imwrite(f'{args.output}/{args.extractor}_{args.matching}.png', nova_imagem)

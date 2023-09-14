@@ -22,8 +22,9 @@ def detectAndDescribe(image, method):
     inicio = time.time_ns()
     (kps, features) = descriptor.detectAndCompute(image, None)
     fim = time.time_ns()
-
-    logging.debug(f'Extração levou {(inicio - fim) * 1e-9 } segundos')
+    
+    logging.info('Total de pontos-chaves: %d', len(kps))
+    logging.debug('Extração levou %.4f segundos', (fim - inicio) * 1e-9)
 
     return (kps, features)
 
@@ -34,17 +35,17 @@ def matchKeyPoints(featuresA, featuresB, method, feature_extractor, ratio=0.75,)
 
     # Criar o matcher correspondente ao método utilizado para extrair as características
     if feature_extractor == 'sift' or feature_extractor == 'surf':
-        logging.debug(f'Usando a norma L2 para o sift ou surf')
+        logging.debug('Usando a norma L2 para o sift ou surf')
         bf = cv2.BFMatcher(cv2.NORM_L2, crossCheck=crossCheck)
     elif feature_extractor == 'orb' or feature_extractor == 'brisk':
-        logging.debug(f'Usando a norma Hamming para o orb ou brisk')
+        logging.debug('Usando a norma Hamming para o orb ou brisk')
         bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=crossCheck)
 
     # Encontrar os pares correspondentes do
+    inicio = time.time_ns()
     if method == 'bf':
         best_matches = bf.match(featuresA,featuresB)
         matches = sorted(best_matches, key = lambda x:x.distance)
-        logging.info(f'Matches (Brute Force): {len(matches)}')
         
     elif method == 'knn':
         best_matches = bf.knnMatch(featuresA,featuresB, 2)
@@ -55,6 +56,9 @@ def matchKeyPoints(featuresA, featuresB, method, feature_extractor, ratio=0.75,)
             # other (i.e. Lowe's ratio test)
             if m.distance < n.distance * ratio:
                 matches.append(m)
-        logging.info(f'Matches (knn): {len(matches)}')
+    fim = time.time_ns()
+
+    logging.info('Matches: %d', len(matches))
+    logging.debug('Matching levou %.4f segundos', (fim - inicio) * 1e-9 )
     
     return matches
