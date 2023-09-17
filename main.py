@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 from funcoes import detectAndDescribe, matchKeyPoints
 
-def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
+def stitch(queryImg_path, trainImg_path, feature_extractor, feature_matching):
     logging.debug('Baixando imagem original...')
     logging.debug(f'Caminho: {queryImg_path}')
     queryImg = cv2.imread(queryImg_path, 1)
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     parser.add_argument('queryImg', help='Imagem original') 
     parser.add_argument('trainImg', help='Imagem a ser costurada na imagem original')
     parser.add_argument('-o', '--output', default='outputs', help='Pasta onde serão salvos os resultados finais') 
-    parser.add_argument('-e', '--extractor', default='orb', help='Método para extrair pontos-chaves. Valores aceitos: brief, orb, sift e surf')
+    parser.add_argument('-e', '--extractor', default='orb', help='Método para extrair pontos-chaves. Valores aceitos: brisk, orb, sift e surf')
     parser.add_argument('-m', '--matching', default='bf', help='Método para encontrar pares de pontos-chaves correspondentes entre as duas imagens. Valores Aceitos: knn e bf') 
     parser.add_argument('-v', '--verbose', action='store_true')
 
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     else:
         logging.basicConfig(level=logging.INFO)
 
-    nova_imagem = stich(args.queryImg, args.trainImg, args.extractor, args.matching)
+    nova_imagem = stitch(args.queryImg, args.trainImg, args.extractor, args.matching)
 
     logging.info(f'Imagens costuradas. Nova imagem de dimensões {nova_imagem.shape}')
     if not os.path.isdir(args.output):

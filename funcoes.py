@@ -3,6 +3,19 @@ import numpy as np
 import logging
 import time
 
+def readImage(filename, scale):
+    img = cv2.imread(filename, 0)
+    w = int(img.shape[1] * scale)
+    h = int(img.shape[0] * scale)
+    img = cv2.resize(img, (w, h))
+
+    if img is None:
+        logging.error('Invalid image:' + filename)
+        return None
+    else:
+        logging.info('Image successfully read...')
+        return img
+    
 def detectAndDescribe(image, method):
     '''
     Calcula os ponto-chaves e características usando um especifíco método

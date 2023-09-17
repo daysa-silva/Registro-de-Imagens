@@ -1,0 +1,99 @@
+extractor ,key_points       ,feature_extract_time ,matching ,matches ,feature_matching_time ,images                                                             ,error
+brisk     ,"[29259, 37205]" ,"[0.5567, 0.6889]"   ,knn      ,    109 ,               8.6807 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,False
+brisk     ,"[29259, 37205]" ,"[0.5943, 0.7152]"   ,bf       ,   7334 ,              14.0605 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,True
+orb       ,"[500, 500]"     ,"[0.0823, 0.0526]"   ,knn      ,      5 ,               0.0052 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,True
+orb       ,"[500, 500]"     ,"[0.0643, 0.0445]"   ,bf       ,    159 ,               0.0084 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,True
+sift      ,"[5972, 9541]"   ,"[0.9752, 0.4314]"   ,knn      ,     89 ,               1.3885 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,False
+sift      ,"[5972, 9541]"   ,"[0.5408, 0.6182]"   ,bf       ,   2081 ,               1.6704 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,False
+surf      ,"[16390, 15881]" ,"[1.0594, 1.3449]"   ,knn      ,    280 ,               1.7962 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,True
+surf      ,"[16390, 15881]" ,"[1.1440, 0.8961]"   ,bf       ,   3740 ,               3.5594 ,"[images/reduce/casa2.png,images/reduce/casa1.png]"                ,True
+
+brisk     ,"[325, 470]"     ,"[0.0174, 0.0209]"   ,knn      ,    127 ,               0.0027 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+brisk     ,"[325, 470]"     ,"[0.0254, 0.0536]"   ,bf       ,    156 ,               0.0052 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+orb       ,"[500, 500]"     ,"[0.0217, 0.0206]"   ,knn      ,    181 ,               0.0062 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+orb       ,"[500, 500]"     ,"[0.0234, 0.0196]"   ,bf       ,    228 ,               0.0093 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+sift      ,"[451, 398]"     ,"[0.3178, 0.2408]"   ,knn      ,    152 ,               0.0053 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+sift      ,"[451, 398]"     ,"[0.3129, 0.1908]"   ,bf       ,    210 ,               0.0031 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+surf      ,"[1162, 1117]"   ,"[0.2554, 0.1875]"   ,knn      ,    398 ,               0.0352 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+surf      ,"[1162, 1117]"   ,"[0.3442, 0.2484]"   ,bf       ,    475 ,               0.0134 ,"[images/FAD I/imagem_005.png,images/FAD I/imagem_004.png]"        ,False
+
+brisk     ,"[2834, 1468]"   ,"[0.0691, 0.0424]"   ,knn      ,    535 ,               0.0462 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+brisk     ,"[2834, 1468]"   ,"[0.0707, 0.0391]"   ,bf       ,    769 ,               0.1221 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+orb       ,"[500, 500]"     ,"[0.0489, 0.0309]"   ,knn      ,     62 ,               0.0058 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+orb       ,"[500, 500]"     ,"[0.0266, 0.0205]"   ,bf       ,    138 ,               0.0094 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+sift      ,"[3340, 1860]"   ,"[0.3744, 0.2552]"   ,knn      ,    795 ,               0.0948 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+sift      ,"[3340, 1860]"   ,"[0.3191, 0.2693]"   ,bf       ,   1068 ,               0.1425 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+surf      ,"[6380, 4440]"   ,"[0.5091, 0.3662]"   ,knn      ,   1705 ,               0.2466 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+surf      ,"[6380, 4440]"   ,"[0.5960, 0.4824]"   ,knn      ,   2186 ,               0.3728 ,"[images/FAD I/imagem_035.png,images/FAD I/imagem_034.png]"        ,False
+
+brisk     ,"[806, 3094]"    ,"[0.0315, 0.0728]"   ,knn      ,    433 ,               0.0279 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+brisk     ,"[806, 3094]"    ,"[0.025, 0.0597]"    ,bf       ,    536 ,               0.0316 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0134, 0.0144]"   ,knn      ,     89 ,               0.0025 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.014, 0.0146]"    ,bf       ,    146 ,               0.0034 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+sift      ,"[770, 1833]"    ,"[0.7086, 0.2848]"   ,knn      ,    301 ,               0.0114 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+sift      ,"[770, 1833]"    ,"[0.3939, 0.4852]"   ,bf       ,    493 ,               0.0222 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+surf      ,"[1906, 3642]"   ,"[0.2883, 0.4091]"   ,knn      ,    582 ,               0.0306 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+surf      ,"[1906, 3642]"   ,"[0.1981, 0.355]"    ,bf       ,    916 ,               0.0716 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+
+brisk     ,"[3747, 2813]"   ,"[0.0747, 0.0551]"   ,knn      ,   1183 ,               0.0762 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+brisk     ,"[3747, 2813]"   ,"[0.0717, 0.0526]"   ,bf       ,   1414 ,               0.1299 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0143, 0.0152]"   ,knn      ,    294 ,               0.0023 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0165, 0.0135]"   ,bf       ,    296 ,               0.0035 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+sift      ,"[3296, 1960]"   ,"[0.2337, 0.1842]"   ,knn      ,    776 ,               0.0518 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+sift      ,"[3296, 1960]"   ,"[0.2241, 0.196]"    ,bf       ,   1074 ,               0.1078 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+surf      ,"[6329, 4105]"   ,"[0.4685, 0.3454]"   ,knn      ,   1799 ,               0.2038 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+surf      ,"[6329, 4105]"   ,"[0.5634, 0.4138]"   ,bf       ,   2162 ,               0.2456 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+
+brisk     ,"[4623, 8575]"   ,"[0.0942, 0.1485]"   ,knn      ,   2026 ,               0.2643 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+brisk     ,"[4623, 8575]"   ,"[0.0855, 0.1527]"   ,bf       ,   2638 ,               0.5117 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+orb       ,"[500, 500]"     ,"[0.0171, 0.0214]"   ,knn      ,    262 ,               0.0021 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+orb       ,"[500, 500]"     ,"[0.0169, 0.0221]"   ,bf       ,    274 ,               0.0033 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+sift      ,"[4229, 7464]"   ,"[0.2357, 0.2725]"   ,knn      ,   1697 ,               0.2844 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+sift      ,"[4229, 7464]"   ,"[0.2686, 0.2796]"   ,bf       ,   2630 ,               0.5251 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+surf      ,"[4409, 7181]"   ,"[0.3405, 0.4852]"   ,knn      ,   1716 ,               0.1532 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+surf      ,"[4409, 7181]"   ,"[0.3478, 0.486]"    ,bf       ,   2427 ,               0.2934 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+
+brisk     ,"[15178, 10110]" ,"[0.2591, 0.1811]"   ,knn      ,   1169 ,               1.107  ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+brisk     ,"[15178, 10110]" ,"[0.2726, 0.1788]"   ,bf       ,   4298 ,               2.7039 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+orb       ,"[500, 500]"     ,"[0.0406, 0.0252]"   ,knn      ,     35 ,               0.0028 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+orb       ,"[500, 500]"     ,"[0.038, 0.0282]"    ,bf       ,    172 ,               0.0057 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+sift      ,"[10792, 7783]"  ,"[0.3525, 0.3192]"   ,knn      ,   1273 ,               0.7418 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+sift      ,"[10792, 7783]"  ,"[0.3493, 0.2727]"   ,bf       ,   3389 ,               2.0535 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+surf      ,"[9398, 7441]"   ,"[0.5858, 0.4126]"   ,knn      ,    319 ,               0.3324 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+surf      ,"[9398, 7441]"   ,"[0.5477, 0.4091]"   ,bf       ,   2503 ,               0.6627 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+
+brisk     ,"[121, 85]"      ,"[0.0094, 0.0112]"   ,knn      ,     57 ,               0.0002 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+brisk     ,"[121, 85]"      ,"[0.0096, 0.008]"    ,bf       ,     55 ,               0.0005 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+orb       ,"[279, 236]"     ,"[0.0102, 0.0106]"   ,knn      ,     99 ,               0.001  ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+orb       ,"[279, 236]"     ,"[0.0111, 0.0116]"   ,bf       ,    111 ,               0.0014 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+sift      ,"[268, 177]"     ,"[0.1736, 0.1691]"   ,knn      ,     97 ,               0.0006 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+sift      ,"[268, 177]"     ,"[0.1701, 0.1656]"   ,bf       ,    113 ,               0.0012 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+surf      ,"[1420, 1038]"   ,"[0.1962, 0.1356]"   ,knn      ,    353 ,               0.0079 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+surf      ,"[1420, 1038]"   ,"[0.1734, 0.14]"     ,bf       ,    540 ,               0.0135 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+
+brisk     ,"[2151, 4906]"   ,"[0.0428, 0.0857]"   ,knn      ,    592 ,               0.0728 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+brisk     ,"[2151, 4906]"   ,"[0.052, 0.0857]"    ,bf       ,   1213 ,               0.1452 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0135, 0.0163]"   ,knn      ,     94 ,               0.002  ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0148, 0.0182]"   ,bf       ,    187 ,               0.0031 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+sift      ,"[1661, 3386]"   ,"[0.1895, 0.2122]"   ,knn      ,    439 ,               0.0481 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+sift      ,"[1661, 3386]"   ,"[0.1925, 0.2198]"   ,bf       ,    804 ,               0.0925 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+surf      ,"[3651, 4241]"   ,"[0.3068, 0.2261]"   ,knn      ,    750 ,               0.0714 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+surf      ,"[3651, 4241]"   ,"[0.3298, 0.2232]"   ,bf       ,   1295 ,               0.1441 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+
+brisk     ,"[7030, 6018]"   ,"[0.1149, 0.1069]"   ,knn      ,   1120 ,               0.2841 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+brisk     ,"[7030, 6018]"   ,"[0.1226, 0.0985]"   ,bf       ,   2415 ,               0.5676 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0217, 0.0207]"   ,knn      ,     66 ,               0.0017 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.02, 0.0199]"     ,bf       ,    136 ,               0.0032 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+sift      ,"[5793, 5918]"   ,"[0.2619, 0.2604]"   ,knn      ,   1218 ,               0.2719 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+sift      ,"[5793, 5918]"   ,"[0.2541, 0.2532]"   ,bf       ,   2409 ,               0.5474 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+surf      ,"[7750, 7343]"   ,"[0.4993, 1.0629]"   ,knn      ,    632 ,               0.5743 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+surf      ,"[7750, 7343]"   ,"[0.4596, 0.4156]"   ,bf       ,   2517 ,               0.5345 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+
+brisk     ,"[3082, 2030]"   ,"[0.0633, 0.0432]"   ,knn      ,    683 ,               0.0417 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
+brisk     ,"[3082, 2030]"   ,"[0.0604, 0.0447]"   ,bf       ,    981 ,               0.1038 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0161, 0.0143]"   ,knn      ,    100 ,               0.0018 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
+orb       ,"[500, 500]"     ,"[0.0151, 0.0153]"   ,bf       ,    168 ,               0.0076 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
+sift      ,"[2116, 2116]"   ,"[0.2089, 0.2037]"   ,knn      ,    594 ,               0.0369 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
+sift      ,"[2116, 2116]"   ,"[0.2051, 0.1952]"   ,bf       ,    848 ,               0.0712 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
+surf      ,"[4863, 5929]"   ,"[0.3487, 0.4783]"   ,knn      ,   1595 ,               0.1681 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
+surf      ,"[4863, 5929]"   ,"[0.3882, 0.5216]"   ,bf       ,   2243 ,               0.3012 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
