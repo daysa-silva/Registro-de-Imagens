@@ -2,19 +2,6 @@ import cv2
 import numpy as np
 import logging
 import time
-
-def readImage(filename, scale):
-    img = cv2.imread(filename, 0)
-    w = int(img.shape[1] * scale)
-    h = int(img.shape[0] * scale)
-    img = cv2.resize(img, (w, h))
-
-    if img is None:
-        logging.error('Invalid image:' + filename)
-        return None
-    else:
-        logging.info('Image successfully read...')
-        return img
     
 def detectAndDescribe(image, method):
     '''
@@ -36,10 +23,13 @@ def detectAndDescribe(image, method):
     (kps, features) = descriptor.detectAndCompute(image, None)
     fim = time.time_ns()
     
-    logging.info('Total de pontos-chaves: %d', len(kps))
-    logging.debug('Extração levou %.4f segundos', (fim - inicio) * 1e-9)
+    
+    tempo =  (fim - inicio) * 1e-9
 
-    return (kps, features)
+    logging.info('Total de pontos-chaves: %d', len(kps))
+    logging.debug('Extração levou %.4f segundos', tempo * 1e-9)
+
+    return (kps, features, tempo)
 
 def matchKeyPoints(featuresA, featuresB, method, feature_extractor, ratio=0.75,):
     "Cria e retorna as correspondências entre os pontos-chaves das duas imagens"
@@ -70,8 +60,22 @@ def matchKeyPoints(featuresA, featuresB, method, feature_extractor, ratio=0.75,)
             if m.distance < n.distance * ratio:
                 matches.append(m)
     fim = time.time_ns()
-
-    logging.info('Matches: %d', len(matches))
-    logging.debug('Matching levou %.4f segundos', (fim - inicio) * 1e-9 )
     
-    return matches
+    tempo = (fim - inicio) * 1e-9
+    logging.info('Matches: %d', len(matches))
+    logging.debug('Matching levou %.4f segundos', tempo )
+    return (matches,  tempo)
+
+def findHomographyMatrix(kptsA, kptsB, matches):
+    # Coordenadas do pontos-chave
+    kptsA = np.float32([kp.pt for kp in kptsA])
+    kptsB = np.float32([kp.pt for kp in kptsB])
+
+    # Índices dos pontos-chaves no descriptor
+    ptsA = np.float32([kptsA[m.queryIdx] for m in matches])
+    ptsB = np.float32([kptsB[m.trainIdx] for m in matches])
+
+    # DOC: Finds a perspective transformation between two planes. 
+    (H, status) = cv2.findHomography(ptsA, ptsB, cv2.RANSAC,4)
+
+    return H

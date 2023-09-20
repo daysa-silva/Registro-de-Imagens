@@ -3,42 +3,31 @@ import logging
 import os
 import cv2
 import numpy as np
-from funcoes import detectAndDescribe, matchKeyPoints
+from src.stich import detectAndDescribe, matchKeyPoints, findHomographyMatrix
+from src.utils import readImage, readImageColor
 
 def stitch(queryImg_path, trainImg_path, feature_extractor, feature_matching):
-    logging.debug('Baixando imagem original...')
-    logging.debug(f'Caminho: {queryImg_path}')
-    queryImg = cv2.imread(queryImg_path, 1)
-    queryImg_gray = cv2.cvtColor(queryImg, cv2.COLOR_BGR2GRAY)
+    logging.info('Baixando imagem original...')
+    queryImg = readImageColor(queryImg_path, 1)
+    queryImg_gray = readImage(queryImg_path, 1)
 
-    logging.debug('Baixando imagem a ser costurada...')
-    logging.debug(f'Caminho: {trainImg_path}')
-    trainImg = cv2.imread(trainImg_path, 1)
-    trainImg_gray = cv2.cvtColor(cv2.imread(trainImg_path, 1), cv2.COLOR_BGR2GRAY)
+    logging.info('Baixando imagem a ser costurada...')
+    trainImg = readImageColor(trainImg_path, 1)
+    trainImg_gray = readImageColor(trainImg_path, 1)
     
     # Busca os pontos-chave e recursos correspondentes às imagens
     logging.info('Encontrando os pontos-chaves...')
-    logging.info(f'feature_extractor: {feature_extractor}')
-    kpsA, featuresA = detectAndDescribe(trainImg_gray, feature_extractor)
-    kpsB, featuresB = detectAndDescribe(queryImg_gray, feature_extractor)
+    logging.info('feature_extractor: %s', feature_extractor)
+    kpsA, featuresA, _ = detectAndDescribe(trainImg_gray, feature_extractor)
+    kpsB, featuresB, _ = detectAndDescribe(queryImg_gray, feature_extractor)
 
     # Vamos encontrar os ponto chaves correspondentes nessas duas imagens
     logging.info('Encontrando os pares de pontos-chaves correspondentes...')
-    logging.info(f'feature_matching: {feature_matching}')
-    matches = matchKeyPoints(featuresA, featuresB, feature_matching, feature_extractor)
-
+    logging.info('feature_matching: $s', feature_matching)
+    matches, _ = matchKeyPoints(featuresA, featuresB, feature_matching, feature_extractor)
 
     ## Matriz de Homografia
-    # Coordenadas do pontos-chave
-    kpsA = np.float32([kp.pt for kp in kpsA])
-    kpsB = np.float32([kp.pt for kp in kpsB])
-
-    # Índices dos pontos-chaves no descriptor
-    ptsA = np.float32([kpsA[m.queryIdx] for m in matches])
-    ptsB = np.float32([kpsB[m.trainIdx] for m in matches])
-
-    # DOC: Finds a perspective transformation between two planes. 
-    (H, status) = cv2.findHomography(ptsA, ptsB, cv2.RANSAC,4)
+    H = findHomographyMatrix(kpsA, kpsB, matches)
 
     # Por fim, vamos gerar o resultado final
     width = trainImg.shape[1] + queryImg.shape[1]
