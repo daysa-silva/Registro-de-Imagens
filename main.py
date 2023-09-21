@@ -23,11 +23,11 @@ def stitch(queryImg_path, trainImg_path, feature_extractor, feature_matching):
 
     # Vamos encontrar os ponto chaves correspondentes nessas duas imagens
     logging.info('Encontrando os pares de pontos-chaves correspondentes...')
-    logging.info('feature_matching: $s', feature_matching)
+    logging.info('feature_matching: %s', feature_matching)
     matches, _ = matchKeyPoints(featuresA, featuresB, feature_matching, feature_extractor)
 
     ## Matriz de Homografia
-    H = findHomographyMatrix(kpsA, kpsB, matches)
+    H, _ = findHomographyMatrix(kpsA, kpsB, matches)
 
     # Por fim, vamos gerar o resultado final
     width = trainImg.shape[1] + queryImg.shape[1]

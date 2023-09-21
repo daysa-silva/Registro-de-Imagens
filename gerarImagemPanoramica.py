@@ -1,4 +1,4 @@
-import cv2, logging
+import cv2
 from main import stitch
 from os import listdir
 from os.path import isfile, join

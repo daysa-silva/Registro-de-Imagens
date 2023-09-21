@@ -78,4 +78,12 @@ def findHomographyMatrix(kptsA, kptsB, matches):
     # DOC: Finds a perspective transformation between two planes. 
     (H, status) = cv2.findHomography(ptsA, ptsB, cv2.RANSAC,4)
 
-    return H
+    # Calcular o RMSE da matriz H
+    x_A = np.append( ptsA, np.ones((len(matches), 1)), axis=1)
+    x_B_pred = x_A @ H.T
+    
+    erro = np.sqrt(np.mean((x_B_pred[:,:2] - ptsB)**2))
+
+    logging.debug('RMSE da homografia %.4f', erro)
+
+    return H, erro

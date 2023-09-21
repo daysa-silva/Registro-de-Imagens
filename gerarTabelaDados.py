@@ -1,9 +1,8 @@
 import logging
-import time
 import cv2
 import numpy as np
 import pandas as pd
-from src.stich import detectAndDescribe, matchKeyPoints
+from src.stich import detectAndDescribe, matchKeyPoints, findHomographyMatrix
 
 def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
     logging.debug('Baixando imagem original...')
@@ -34,16 +33,13 @@ def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
     dados['feature_matching_time'].append(np.round(tempo, 4))
 
     ## Matriz de Homografia
-    # Coordenadas do pontos-chave
-    kpsA = np.float32([kp.pt for kp in kpsA])
-    kpsB = np.float32([kp.pt for kp in kpsB])
+    try:
+        H, erroHomografia = findHomographyMatrix(kpsA, kpsB, matches)
 
-    # Índices dos pontos-chaves no descriptor
-    ptsA = np.float32([kpsA[m.queryIdx] for m in matches])
-    ptsB = np.float32([kpsB[m.trainIdx] for m in matches])
-
-    # DOC: Finds a perspective transformation between two planes. 
-    (H, status) = cv2.findHomography(ptsA, ptsB, cv2.RANSAC,4)
+        dados["rmse_homography"].append(np.round(erroHomografia, 2))
+    except Exception as error:
+        dados["rmse_homography"].append(np.NAN)
+        raise(error)
 
     # Por fim, vamos gerar o resultado final
     width = trainImg.shape[1] + queryImg.shape[1]
@@ -58,6 +54,21 @@ def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
     return result[:_y,:_x]
 
 lista = [
+    {
+        "queryImg": 'images/reduce/casa2.png',
+        "trainImg": 'images/reduce/casa1.png',
+        "pasta": 'casa'
+    },
+    {
+        "queryImg": 'images/FAD I/imagem_005.png',
+        "trainImg": 'images/FAD I/imagem_004.png',
+        "pasta": 'FAD I (4 e 5)'
+    },
+    {
+        "queryImg": 'images/FAD I/imagem_035.png',
+        "trainImg": 'images/FAD I/imagem_034.png',
+        "pasta": 'FAD I (34 e 35)'
+    },
     {
         "queryImg": 'images/FAD I/imagem_044.png',
         "trainImg": 'images/FAD I/imagem_043.png',
@@ -107,6 +118,7 @@ dados = {
     "matching": [],
     "matches": [],
     "feature_matching_time": [],
+    "rmse_homography": [],
     "images": [],
     "error": []
 }
@@ -123,8 +135,8 @@ for imagens in lista:
             try:
                 nova_imagem = stich(imagens["queryImg"], imagens["trainImg"], extractor, matching)
         
-                logging.info(f'Salvando imagem em outputs/{imagens["pasta"]}/{extractor}_{matching}.png')
-                cv2.imwrite(f'outputs/{imagens["pasta"]}/{extractor}_{matching}.png', nova_imagem)
+                # logging.info(f'Salvando imagem em outputs/{imagens["pasta"]}/{extractor}_{matching}.png')
+                # cv2.imwrite(f'outputs/{imagens["pasta"]}/{extractor}_{matching}.png', nova_imagem)
 
             except Exception as erro:
                 logging.error(erro)
