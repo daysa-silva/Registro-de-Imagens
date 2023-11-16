@@ -22,8 +22,8 @@ def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
     kpsB, featuresB, tempoB = detectAndDescribe(queryImg_gray, feature_extractor)
 
     dados['key_points'].append([len(kpsA), len(kpsB)])
-    dados['feature_extract_time'].append([np.round(tempoA, 4), np.round(tempoB, 4)])
-    dados['extract_mean_time'].append([np.round(tempoA / len(kpsA), 6), np.round(tempoB / len(kpsB), 6)])
+    dados['feature_extract_time (e-04)'].append([np.round(tempoA*10e4), np.round(tempoB*10e4)])
+    dados['extract_mean_time (e-06)'].append([np.round(tempoA *10e06 / len(kpsA)), np.round(tempoB *10e06 / len(kpsB))])
 
     # Vamos encontrar os ponto chaves correspondentes nessas duas imagens
     logging.info('Encontrando os pares de pontos-chaves correspondentes...')
@@ -31,8 +31,8 @@ def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
     matches, tempo = matchKeyPoints(featuresA, featuresB, feature_matching, feature_extractor)
 
     dados['matches'].append(len(matches))
-    dados['feature_matching_time'].append(np.round(tempo, 4))
-    dados['match_mean_time'].append(np.round(tempo / len(matches), 4))
+    dados['feature_match_time (e-04)'].append(np.round(tempo*10e4))
+    dados['match_mean_time (e-06)'].append(np.round(tempo / len(matches) * 10e6))
 
     ## Matriz de Homografia
     try:
@@ -116,12 +116,12 @@ lista = [
 dados = {
     "extractor": [],
     "key_points": [],
-    "feature_extract_time": [],
-    "extract_mean_time": [],
-    "matching": [],
+    "feature_extract_time (e-04)": [],
+    "extract_mean_time (e-06)": [],
+    "matcher": [],
     "matches": [],
-    "feature_matching_time": [],
-    "match_mean_time": [],
+    "feature_match_time (e-04)": [],
+    "match_mean_time (e-06)": [],
     "rmse_homography": [],
     "images": [],
     "error": []
@@ -129,18 +129,18 @@ dados = {
 
 for imagens in lista:
     for extractor in ["brisk", "orb", "sift", "surf"]:
-        for matching in ["knn", "bf"]:
+        for matcher in ["knn", "bf"]:
 
             dados['images'].append([imagens["queryImg"], imagens["trainImg"]])
             dados['extractor'].append(extractor)
-            dados['matching'].append(matching)
+            dados['matcher'].append(matcher)
             dados['error'].append(False)
 
             try:
-                nova_imagem = stich(imagens["queryImg"], imagens["trainImg"], extractor, matching)
+                nova_imagem = stich(imagens["queryImg"], imagens["trainImg"], extractor, matcher)
         
-                # logging.info(f'Salvando imagem em outputs/{imagens["pasta"]}/{extractor}_{matching}.png')
-                # cv2.imwrite(f'outputs/{imagens["pasta"]}/{extractor}_{matching}.png', nova_imagem)
+                # logging.info(f'Salvando imagem em outputs/{imagens["pasta"]}/{extractor}_{matcher}.png')
+                # cv2.imwrite(f'outputs/{imagens["pasta"]}/{extractor}_{matcher}.png', nova_imagem)
 
             except Exception as erro:
                 logging.error(erro)
