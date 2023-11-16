@@ -23,6 +23,7 @@ def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
 
     dados['key_points'].append([len(kpsA), len(kpsB)])
     dados['feature_extract_time'].append([np.round(tempoA, 4), np.round(tempoB, 4)])
+    dados['extract_mean_time'].append([np.round(tempoA / len(kpsA), 6), np.round(tempoB / len(kpsB), 6)])
 
     # Vamos encontrar os ponto chaves correspondentes nessas duas imagens
     logging.info('Encontrando os pares de pontos-chaves correspondentes...')
@@ -31,6 +32,7 @@ def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
 
     dados['matches'].append(len(matches))
     dados['feature_matching_time'].append(np.round(tempo, 4))
+    dados['match_mean_time'].append(np.round(tempo / len(matches), 4))
 
     ## Matriz de Homografia
     try:
@@ -54,11 +56,11 @@ def stich(queryImg_path, trainImg_path, feature_extractor, feature_matching):
     return result[:_y,:_x]
 
 lista = [
-    {
-        "queryImg": 'images/reduce/casa2.png',
-        "trainImg": 'images/reduce/casa1.png',
-        "pasta": 'casa'
-    },
+    # {
+    #     "queryImg": 'images/reduce/casa2.png',
+    #     "trainImg": 'images/reduce/casa1.png',
+    #     "pasta": 'casa'
+    # },
     {
         "queryImg": 'images/FAD I/imagem_005.png',
         "trainImg": 'images/FAD I/imagem_004.png',
@@ -115,9 +117,11 @@ dados = {
     "extractor": [],
     "key_points": [],
     "feature_extract_time": [],
+    "extract_mean_time": [],
     "matching": [],
     "matches": [],
     "feature_matching_time": [],
+    "match_mean_time": [],
     "rmse_homography": [],
     "images": [],
     "error": []

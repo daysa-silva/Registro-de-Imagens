@@ -48,8 +48,8 @@ if __name__ == '__main__':
         #epilog='Text at the bottom of help'
     )
 
-    parser.add_argument('queryImg', help='Imagem original') 
-    parser.add_argument('trainImg', help='Imagem a ser costurada na imagem original')
+    parser.add_argument('queryImg', help='Imagem de referência') 
+    parser.add_argument('trainImg', help='Imagem a ser costurada na imagem de referência')
     parser.add_argument('-o', '--output', default='outputs', help='Pasta onde serão salvos os resultados finais') 
     parser.add_argument('-e', '--extractor', default='orb', help='Método para extrair pontos-chaves. Valores aceitos: brisk, orb, sift e surf')
     parser.add_argument('-m', '--matching', default='bf', help='Método para encontrar pares de pontos-chaves correspondentes entre as duas imagens. Valores Aceitos: knn e bf') 

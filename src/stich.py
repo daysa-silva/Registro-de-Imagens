@@ -11,7 +11,7 @@ def detectAndDescribe(image, method):
     assert method in ['orb','brisk', 'surf', 'sift'], 'Você precisa definir um método de detecção. Valores são: "sift", "brisk", "surf" e "orb"'
 
     if method == 'orb':
-        descriptor = cv2.ORB_create()
+        descriptor = cv2.ORB_create(nfeatures = 5000)
     elif method == 'surf':
         descriptor = cv2.xfeatures2d.SURF_create()
     elif method == 'brisk':
