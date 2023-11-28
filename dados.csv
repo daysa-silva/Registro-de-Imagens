@@ -7,6 +7,7 @@ sift      ,"[451, 398]"     ,"[31777.0, 20900.0]"        ,"[7046.0, 5251.0]"    
 sift      ,"[451, 398]"     ,"[21546.0, 21193.0]"        ,"[4777.0, 5325.0]"       ,bf      ,    210 ,                    301.0 ,                 144.0 ,         154.21 ,"['images/FAD I/imagem_005.png', 'images/FAD I/imagem_004.png']"   ,False
 surf      ,"[1162, 1117]"   ,"[12394.0, 12302.0]"        ,"[1067.0, 1101.0]"       ,knn     ,    398 ,                    656.0 ,                 165.0 ,          94.25 ,"['images/FAD I/imagem_005.png', 'images/FAD I/imagem_004.png']"   ,False
 surf      ,"[1162, 1117]"   ,"[12615.0, 12180.0]"        ,"[1086.0, 1090.0]"       ,bf      ,    475 ,                   1126.0 ,                 237.0 ,         157.15 ,"['images/FAD I/imagem_005.png', 'images/FAD I/imagem_004.png']"   ,False
+
 brisk     ,"[2834, 1468]"   ,"[5455.0, 2865.0]"          ,"[192.0, 195.0]"         ,knn     ,    535 ,                   3126.0 ,                 584.0 ,          68.65 ,"['images/FAD I/imagem_035.png', 'images/FAD I/imagem_034.png']"   ,False
 brisk     ,"[2834, 1468]"   ,"[5024.0, 3095.0]"          ,"[177.0, 211.0]"         ,bf      ,    769 ,                   5438.0 ,                 707.0 ,         181.09 ,"['images/FAD I/imagem_035.png', 'images/FAD I/imagem_034.png']"   ,False
 orb       ,"[4933, 4088]"   ,"[2629.0, 2180.0]"          ,"[53.0, 53.0]"           ,knn     ,    839 ,                  10548.0 ,                1257.0 ,          66.72 ,"['images/FAD I/imagem_035.png', 'images/FAD I/imagem_034.png']"   ,False
@@ -15,6 +16,7 @@ sift      ,"[3340, 1860]"   ,"[23224.0, 16997.0]"        ,"[695.0, 914.0]"      
 sift      ,"[3340, 1860]"   ,"[23100.0, 18229.0]"        ,"[692.0, 980.0]"         ,bf      ,   1068 ,                   9551.0 ,                 894.0 ,         153.99 ,"['images/FAD I/imagem_035.png', 'images/FAD I/imagem_034.png']"   ,False
 surf      ,"[6380, 4440]"   ,"[38541.0, 28846.0]"        ,"[604.0, 650.0]"         ,knn     ,   1705 ,                  13356.0 ,                 783.0 ,          79.58 ,"['images/FAD I/imagem_035.png', 'images/FAD I/imagem_034.png']"   ,False
 surf      ,"[6380, 4440]"   ,"[40050.0, 28950.0]"        ,"[628.0, 652.0]"         ,bf      ,   2186 ,                  26744.0 ,                1223.0 ,         161.49 ,"['images/FAD I/imagem_035.png', 'images/FAD I/imagem_034.png']"   ,False
+
 brisk     ,"[806, 3094]"    ,"[2117.0, 5370.0]"          ,"[263.0, 174.0]"         ,knn     ,    433 ,                   1625.0 ,                 375.0 ,         107.58 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
 brisk     ,"[806, 3094]"    ,"[2068.0, 5494.0]"          ,"[257.0, 178.0]"         ,bf      ,    536 ,                   3227.0 ,                 602.0 ,         143.49 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
 orb       ,"[1954, 4987]"   ,"[1491.0, 2598.0]"          ,"[76.0, 52.0]"           ,knn     ,    567 ,                   5373.0 ,                 948.0 ,         101.37 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
@@ -23,6 +25,7 @@ sift      ,"[770, 1833]"    ,"[18408.0, 17790.0]"        ,"[2391.0, 971.0]"     
 sift      ,"[770, 1833]"    ,"[19911.0, 22729.0]"        ,"[2586.0, 1240.0]"       ,bf      ,    493 ,                   2129.0 ,                 432.0 ,         198.8  ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
 surf      ,"[1906, 3642]"   ,"[19438.0, 31354.0]"        ,"[1020.0, 861.0]"        ,knn     ,    582 ,                   3129.0 ,                 538.0 ,         130.94 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
 surf      ,"[1906, 3642]"   ,"[20666.0, 32454.0]"        ,"[1084.0, 891.0]"        ,bf      ,    916 ,                   6318.0 ,                 690.0 ,         236.33 ,"['images/FAD I/imagem_044.png', 'images/FAD I/imagem_043.png']"   ,False
+
 brisk     ,"[3747, 2813]"   ,"[6482.0, 5012.0]"          ,"[173.0, 178.0]"         ,knn     ,   1183 ,                   7211.0 ,                 610.0 ,          36.98 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
 brisk     ,"[3747, 2813]"   ,"[6002.0, 4593.0]"          ,"[160.0, 163.0]"         ,bf      ,   1414 ,                  13501.0 ,                 955.0 ,          98.66 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
 orb       ,"[4874, 4964]"   ,"[2457.0, 2441.0]"          ,"[50.0, 49.0]"           ,knn     ,   2112 ,                  13278.0 ,                 629.0 ,          35.16 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
@@ -31,6 +34,7 @@ sift      ,"[3296, 1960]"   ,"[22505.0, 17405.0]"        ,"[683.0, 888.0]"      
 sift      ,"[3296, 1960]"   ,"[22857.0, 17027.0]"        ,"[693.0, 869.0]"         ,bf      ,   1074 ,                   9885.0 ,                 920.0 ,         157.98 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
 surf      ,"[6329, 4105]"   ,"[42584.0, 35108.0]"        ,"[673.0, 855.0]"         ,knn     ,   1799 ,                  12371.0 ,                 688.0 ,          57.1  ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
 surf      ,"[6329, 4105]"   ,"[42677.0, 35752.0]"        ,"[674.0, 871.0]"         ,bf      ,   2162 ,                  24877.0 ,                1151.0 ,         118.17 ,"['images/FAD I/imagem_053.png', 'images/FAD I/imagem_052.png']"   ,False
+
 brisk     ,"[4623, 8575]"   ,"[7228.0, 12812.0]"         ,"[156.0, 149.0]"         ,knn     ,   2026 ,                  27002.0 ,                1333.0 ,         115.38 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
 brisk     ,"[4623, 8575]"   ,"[7648.0, 13350.0]"         ,"[165.0, 156.0]"         ,bf      ,   2638 ,                  54518.0 ,                2067.0 ,         222.79 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
 orb       ,"[5000, 5000]"   ,"[2752.0, 3228.0]"          ,"[55.0, 65.0]"           ,knn     ,   1588 ,                  14112.0 ,                 889.0 ,         100.25 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
@@ -39,6 +43,7 @@ sift      ,"[4229, 7464]"   ,"[23082.0, 27799.0]"        ,"[546.0, 372.0]"      
 sift      ,"[4229, 7464]"   ,"[23578.0, 26079.0]"        ,"[558.0, 349.0]"         ,bf      ,   2630 ,                  50917.0 ,                1936.0 ,         279.64 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
 surf      ,"[4409, 7181]"   ,"[35413.0, 47993.0]"        ,"[803.0, 668.0]"         ,knn     ,   1716 ,                  15256.0 ,                 889.0 ,         110.87 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
 surf      ,"[4409, 7181]"   ,"[35393.0, 49320.0]"        ,"[803.0, 687.0]"         ,bf      ,   2427 ,                  30766.0 ,                1268.0 ,         234.68 ,"['images/FAD II/imagem_013.png', 'images/FAD II/imagem_012.png']" ,False
+
 brisk     ,"[15178, 10110]" ,"[22102.0, 14858.0]"        ,"[146.0, 147.0]"         ,knn     ,   1169 ,                 107548.0 ,                9200.0 ,         100.07 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
 brisk     ,"[15178, 10110]" ,"[30533.0, 17414.0]"        ,"[201.0, 172.0]"         ,bf      ,   4298 ,                 212613.0 ,                4947.0 ,         271.01 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
 orb       ,"[5000, 4932]"   ,"[4816.0, 3923.0]"          ,"[96.0, 80.0]"           ,knn     ,    329 ,                  15749.0 ,                4787.0 ,         112.3  ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
@@ -47,6 +52,7 @@ sift      ,"[10792, 7783]"  ,"[40201.0, 29837.0]"        ,"[373.0, 383.0]"      
 sift      ,"[10792, 7783]"  ,"[34673.0, 25469.0]"        ,"[321.0, 327.0]"         ,bf      ,   3389 ,                 167063.0 ,                4930.0 ,         281.96 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
 surf      ,"[9398, 7441]"   ,"[70918.0, 48328.0]"        ,"[755.0, 649.0]"         ,knn     ,    319 ,                  34615.0 ,               10851.0 ,         146.71 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
 surf      ,"[9398, 7441]"   ,"[58211.0, 41072.0]"        ,"[619.0, 552.0]"         ,bf      ,   2503 ,                  69436.0 ,                2774.0 ,         286.74 ,"['images/FAD II/imagem_033.png', 'images/FAD II/imagem_032.png']" ,True
+
 brisk     ,"[121, 85]"      ,"[1032.0, 767.0]"           ,"[853.0, 902.0]"         ,knn     ,     57 ,                     87.0 ,                 153.0 ,          73.14 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
 brisk     ,"[121, 85]"      ,"[809.0, 717.0]"            ,"[669.0, 843.0]"         ,bf      ,     55 ,                     59.0 ,                 107.0 ,          97.77 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
 orb       ,"[452, 321]"     ,"[1034.0, 987.0]"           ,"[229.0, 308.0]"         ,knn     ,    135 ,                    141.0 ,                 104.0 ,          60.46 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
@@ -55,6 +61,7 @@ sift      ,"[268, 177]"     ,"[19708.0, 18940.0]"        ,"[7354.0, 10701.0]"   
 sift      ,"[268, 177]"     ,"[19609.0, 18497.0]"        ,"[7317.0, 10450.0]"      ,bf      ,    113 ,                    112.0 ,                  99.0 ,         190.44 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
 surf      ,"[1420, 1038]"   ,"[17193.0, 14438.0]"        ,"[1211.0, 1391.0]"       ,knn     ,    353 ,                    710.0 ,                 201.0 ,          98.14 ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
 surf      ,"[1420, 1038]"   ,"[17456.0, 15638.0]"        ,"[1229.0, 1507.0]"       ,bf      ,    540 ,                   1291.0 ,                 239.0 ,         151.4  ,"['images/FAD II/imagem_040.png', 'images/FAD II/imagem_039.png']" ,False
+
 brisk     ,"[2151, 4906]"   ,"[3869.0, 7933.0]"          ,"[180.0, 162.0]"         ,knn     ,    592 ,                   7563.0 ,                1278.0 ,         113.72 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
 brisk     ,"[2151, 4906]"   ,"[3925.0, 7962.0]"          ,"[182.0, 162.0]"         ,bf      ,   1213 ,                  14586.0 ,                1203.0 ,         301.2  ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
 orb       ,"[3914, 4397]"   ,"[2244.0, 2801.0]"          ,"[57.0, 64.0]"           ,knn     ,    572 ,                  10122.0 ,                1770.0 ,         113.85 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
@@ -63,6 +70,7 @@ sift      ,"[1661, 3386]"   ,"[31302.0, 21927.0]"        ,"[1885.0, 648.0]"     
 sift      ,"[1661, 3386]"   ,"[31660.0, 49321.0]"        ,"[1906.0, 1457.0]"       ,bf      ,    804 ,                  21814.0 ,                2713.0 ,         300.98 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
 surf      ,"[3651, 4241]"   ,"[73207.0, 45929.0]"        ,"[2005.0, 1083.0]"       ,knn     ,    750 ,                  22899.0 ,                3053.0 ,         131.05 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
 surf      ,"[3651, 4241]"   ,"[74969.0, 64744.0]"        ,"[2053.0, 1527.0]"       ,bf      ,   1295 ,                  18212.0 ,                1406.0 ,         268.12 ,"['images/FE PL/imagem_048.png', 'images/FE PL/imagem_047.png']"   ,False
+vem
 brisk     ,"[7030, 6018]"   ,"[12637.0, 11072.0]"        ,"[180.0, 184.0]"         ,knn     ,   1120 ,                  74645.0 ,                6665.0 ,         114.71 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
 brisk     ,"[7030, 6018]"   ,"[13210.0, 11363.0]"        ,"[188.0, 189.0]"         ,bf      ,   2415 ,                  90393.0 ,                3743.0 ,         213.02 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
 orb       ,"[4905, 4872]"   ,"[4210.0, 4088.0]"          ,"[86.0, 84.0]"           ,knn     ,    893 ,                  31148.0 ,                3488.0 ,         115.01 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
@@ -71,6 +79,7 @@ sift      ,"[5793, 5918]"   ,"[40751.0, 32966.0]"        ,"[703.0, 557.0]"      
 sift      ,"[5793, 5918]"   ,"[45577.0, 34422.0]"        ,"[787.0, 582.0]"         ,bf      ,   2409 ,                  83111.0 ,                3450.0 ,         228.44 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
 surf      ,"[7750, 7343]"   ,"[49545.0, 53525.0]"        ,"[639.0, 729.0]"         ,knn     ,    632 ,                  26120.0 ,                4133.0 ,         128.97 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
 surf      ,"[7750, 7343]"   ,"[47898.0, 60272.0]"        ,"[618.0, 821.0]"         ,bf      ,   2517 ,                  60632.0 ,                2409.0 ,         236.99 ,"['images/FE PL/imagem_065.png', 'images/FE PL/imagem_064.png']"   ,False
+
 brisk     ,"[3082, 2030]"   ,"[6113.0, 4199.0]"          ,"[198.0, 207.0]"         ,knn     ,    683 ,                   5844.0 ,                 856.0 ,          90.03 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
 brisk     ,"[3082, 2030]"   ,"[5406.0, 4016.0]"          ,"[175.0, 198.0]"         ,bf      ,    981 ,                   9767.0 ,                 996.0 ,         173.02 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
 orb       ,"[4939, 4519]"   ,"[2456.0, 2516.0]"          ,"[50.0, 56.0]"           ,knn     ,   1005 ,                  12592.0 ,                1253.0 ,          91.82 ,"['images/FE PL/imagem_078.png', 'images/FE PL/imagem_077.png']"   ,False
